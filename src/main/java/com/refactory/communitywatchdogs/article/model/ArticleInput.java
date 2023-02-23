@@ -1,5 +1,6 @@
 package com.refactory.communitywatchdogs.article.model;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,6 +15,7 @@ import java.time.LocalDateTime;
 public class ArticleInput {
     private String category;
 
+    @NotBlank(message = "title field is required")
     private String title;
 
     private String content;
